@@ -1,7 +1,9 @@
 body {
+  height: 100%;
+  width: 100%;
   background-image: url("/src/img/background.jpg");
   font: 20px sans-serif;
-  padding-top: 75px;
+  padding-top: 35px;
 }
 
 main h1 {
@@ -9,7 +11,7 @@ main h1 {
   text-align: center;
   font-size: 50px;
   font-weight: bold;
-  margin-bottom: 55px;
+  margin-bottom: 35px;
 }
 
 .cards {
@@ -32,8 +34,9 @@ article {
   row-gap: 10px;
 }
 
-.card-title {
+.card-name {
   text-align: center;
+  height: 25px;
   background-color: #00b894;
   color: #fff;
   padding: 10px;
@@ -60,16 +63,19 @@ btn-update {
 }
 
 .btn-back {
-  margin: 0;
+  margin-left: 14%;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 350px;
+  margin-bottom: 20px;
   padding: 10px;
   opacity: 0.9;
 }
 
 btn-add {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 43%;
+  margin-left: 20%;
   width: 250px;
   background-color: #1dd1a1;
   color: #fff;
@@ -78,11 +84,7 @@ btn-add {
 }
 
 btn-delete {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  margin-left: 43%;
+  margin-left: 120px;
   width: 250px;
   background-color: #ff6b6b;
   color: #fff;
