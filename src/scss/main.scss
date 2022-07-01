@@ -24,6 +24,7 @@ header {
 }
 
 .cards {
+  padding: 20px;
   margin: 0 auto;
 }
 
@@ -54,6 +55,7 @@ header {
   border-radius: 0 0 10px 10px;
 }
 
+
 .card-desc {
   color: #0a3d62;
   text-align: center;
@@ -74,18 +76,9 @@ btn-update {
   border-radius: 5px;
 }
 
-.btn-back {
-  margin-left: 14%;
+.btn-add {
   text-align: center;
-  display: flex;
-  margin-top: 350px;
-  margin-bottom: 20px;
-  padding: 10px;
-  opacity: 0.9;
-}
-
-btn-add {
-  margin-left: 20%;
+  margin-left: 60%;
   width: 250px;
   background-color: #1dd1a1;
   color: #fff;
@@ -93,8 +86,9 @@ btn-add {
   border-radius: 5px;
 }
 
-btn-delete {
-  margin-left: 120px;
+.btn-delete {
+  text-align: center;
+  margin-left: 20%;
   width: 250px;
   background-color: #ff6b6b;
   color: #fff;
