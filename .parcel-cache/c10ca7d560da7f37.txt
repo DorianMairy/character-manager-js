@@ -6,11 +6,11 @@
 58/home/dorian/Documents/Becode/character-manager-js/src/css1656917871671590511 1
 54/home/dorian/Documents/Becode/character-manager-js/src1656917871671590511 1
 74/home/dorian/Documents/Becode/character-manager-js/dist/index.008b0dfe.css1656967846658894568 0
-73/home/dorian/Documents/Becode/character-manager-js/dist/index.64a4978e.js1656967846750895051 0
+73/home/dorian/Documents/Becode/character-manager-js/dist/index.64a4978e.js1656968095611662533 0
 66/home/dorian/Documents/Becode/character-manager-js/dist/index.html1656967846766895135 0
 78/home/dorian/Documents/Becode/character-manager-js/dist/index.008b0dfe.css.map1656967846666894610 0
 92/home/dorian/Documents/Becode/character-manager-js/dist/character-manager-js.3464ddca.js.map1656917870695592759 0
-55/home/dorian/Documents/Becode/character-manager-js/dist1656967846770895157 1
+55/home/dorian/Documents/Becode/character-manager-js/dist1656968095627662557 1
 87/home/dorian/Documents/Becode/character-manager-js/node_modules/@trysound/sax/README.md1656918652642147907 0
 77/home/dorian/Documents/Becode/character-manager-js/node_modules/@trysound/sax1656918652590147989 1
 88/home/dorian/Documents/Becode/character-manager-js/node_modules/msgpackr-extract/LICENSE1656918652586147995 0
@@ -910,7 +910,7 @@
 116/home/dorian/Documents/Becode/character-manager-js/node_modules/css-tree/lib/syntax/pseudo/common/nthWithOfClause.js1656918653150147109 0
 104/home/dorian/Documents/Becode/character-manager-js/node_modules/css-tree/lib/syntax/pseudo/common/nth.js1656918653146147115 0
 113/home/dorian/Documents/Becode/character-manager-js/node_modules/css-tree/lib/syntax/pseudo/common/selectorList.js1656918653162147090 0
-68/home/dorian/Documents/Becode/character-manager-js/src/js/scripts.js1656967510756180721 0
+68/home/dorian/Documents/Becode/character-manager-js/src/js/scripts.js1656968095267662011 0
 93/home/dorian/Documents/Becode/character-manager-js/node_modules/@lezer/common/dist/parse.d.ts1656918652770147706 0
 97/home/dorian/Documents/Becode/character-manager-js/node_modules/css-tree/lib/syntax/pseudo/common1656918653162147090 1
 96/home/dorian/Documents/Becode/character-manager-js/node_modules/css-tree/lib/syntax/node/Hash.js1656918653102147185 0
@@ -3232,7 +3232,7 @@
 97/home/dorian/Documents/Becode/character-manager-js/node_modules/@parcel/config-default/index.json1656918652590147989 0
 91/home/dorian/Documents/Becode/character-manager-js/node_modules/@parcel/config-default/test1656918652566148027 1
 88/home/dorian/Documents/Becode/character-manager-js/node_modules/svgo/lib/svgo/plugins.js1656918652982147373 0
-77/home/dorian/Documents/Becode/character-manager-js/dist/index.64a4978e.js.map1656967846750895051 0
+77/home/dorian/Documents/Becode/character-manager-js/dist/index.64a4978e.js.map1656968095623662552 0
 100/home/dorian/Documents/Becode/character-manager-js/node_modules/@parcel/config-default/test/.babelrc1656918652542148064 0
 110/home/dorian/Documents/Becode/character-manager-js/node_modules/caniuse-lite/data/features/domcontentloaded.js1656918653198147034 0
 106/home/dorian/Documents/Becode/character-manager-js/node_modules/@parcel/config-default/test/config.test.js1656918652574148014 0

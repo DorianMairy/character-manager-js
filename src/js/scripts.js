@@ -174,9 +174,9 @@ async function displayCharactersCards() {
           
         })}
         Main()
-   //setTimeout(function(){
-     //window.location.reload();
-   //}, 1000);
+  setTimeout(function(){
+    window.location.reload();
+  }, 1000);
       })});
 
 
