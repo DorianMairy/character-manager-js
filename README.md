@@ -6,7 +6,7 @@ Fonctionne avec une api de BeCode.
 
 
 
-##Encore un ou deux bugs à régler.##
+## Encore un ou deux bugs à régler.
 
 
 ## Authors
