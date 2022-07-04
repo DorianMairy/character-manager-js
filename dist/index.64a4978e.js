@@ -541,6 +541,7 @@ const btndelete = document.querySelector("btn-delete");
 let i = 0;
 // fonction de chargement des informations des characters
 async function displayCharactersCards() {
+    main.innerHTML = "";
     const response = await fetch("https://character-database.becode.xyz/characters");
     const character = await response.json();
     console.log(character);
@@ -568,10 +569,10 @@ async function displayCharactersCards() {
         cardS.appendChild(cardShortDesc);
         cardShortDesc.innerHTML = character[i].shortDescription;
         // clique sur la photo pour afficher les info
-        cardS.addEventListener("click", function() {
+        cardimg.addEventListener("click", function() {
             cardShortDesc.innerHTML = desc;
             cardShortDesc.setAttribute("class", "card-short-desc");
-            cardS.appendChild(cardShortDesc);
+            cardimg.after(cardShortDesc);
         });
         // bouton
         // bouton new character
@@ -580,17 +581,96 @@ async function displayCharactersCards() {
         cardS.appendChild(cardBtnAdd);
         cardBtnAdd.innerHTML = "New character";
         cardBtnAdd.addEventListener("click", ()=>{
-            console.log(getID);
-            fetch(`https://character-database.becode.xyz/characters/${getID}`, {
-                method: "POST",
-                data: character
-            }).then(()=>cardS.innerHTML = "Add successful");
+            main.innerHTML = "";
+            main.innerHTML = `
+    <input class="form-name" type="text" id="form-name" placeholder="name">
+    <input class="form-short-desc" type="text" id="form-short-desc" placeholder="short description">
+    <input class="form-description" type="text" id="form-description" placeholder="description">
+    <input class="form-image" type="file" id="form-image" placeholder="image">
+    <button class="btn-add" id="btn-add">Add</button>
+    `;
+            let submit = document.getElementById("btn-add");
+            submit.addEventListener("click", ()=>{
+                const toBase64 = (file)=>new Promise((resolve, reject)=>{
+                        const reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        reader.onload = ()=>resolve(reader.result);
+                        reader.onerror = (error)=>reject(error);
+                    });
+                async function Main() {
+                    const file = document.querySelector("#form-image").files[0];
+                    const img64 = await toBase64(file);
+                    console.log(img64);
+                    let name = document.getElementById("form-name").value;
+                    let description = document.getElementById("form-description").value;
+                    let shortDescription = document.getElementById("form-short-desc").value;
+                    fetch(`https://character-database.becode.xyz/characters`, {
+                        method: "POST",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            description: description,
+                            shortDescription: shortDescription,
+                            image: img64.replace(/^data:image\/[a-z]+;base64,/, "")
+                        })
+                    });
+                }
+                Main();
+            //setTimeout(function(){
+            // window.location.reload();
+            // }, 1000);
+            });
         });
         // bouton edits character
         let cardBtnEdit = document.createElement("div");
         cardBtnEdit.setAttribute("class", "btn-edit");
         cardS.appendChild(cardBtnEdit);
         cardBtnEdit.innerHTML = "Edit character";
+        cardBtnEdit.addEventListener("click", ()=>{
+            main.innerHTML = "";
+            main.innerHTML = `
+    <input class="form-name" type="text" id="form-name" placeholder="name">
+    <input class="form-short-desc" type="text" id="form-short-desc" placeholder="short description">
+    <input class="form-description" type="text" id="form-description" placeholder="description">
+    <input class="form-image" type="file" id="form-image" placeholder="image">
+    <button class="btn-add" id="btn-add">Add</button>
+    `;
+            let submit = document.getElementById("btn-add");
+            submit.addEventListener("click", ()=>{
+                const toBase64 = (file)=>new Promise((resolve, reject)=>{
+                        const reader = new FileReader();
+                        reader.readAsDataURL(file);
+                        reader.onload = ()=>resolve(reader.result);
+                        reader.onerror = (error)=>reject(error);
+                    });
+                async function Main() {
+                    const file = document.querySelector("#form-image").files[0];
+                    const img64 = await toBase64(file);
+                    console.log(img64);
+                    let name = document.getElementById("form-name").value;
+                    let description = document.getElementById("form-description").value;
+                    let shortDescription = document.getElementById("form-short-desc").value;
+                    fetch(`https://character-database.becode.xyz/characters`, {
+                        method: "PUT",
+                        headers: {
+                            "Content-Type": "application/json"
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            description: description,
+                            shortDescription: shortDescription,
+                            image: img64.replace(/^data:image\/[a-z]+;base64,/, "")
+                        })
+                    });
+                }
+                Main();
+            // setTimeout(function(){
+            //window.location.reload();
+            // }, 1000);
+            });
+        });
         // bouton delete character
         let cardBtnDel = document.createElement("div");
         cardBtnDel.setAttribute("class", "btn-delete");
@@ -603,6 +683,9 @@ async function displayCharactersCards() {
                 method: "DELETE"
             }).then(()=>cardS.innerHTML = "Delete successful");
             else alert("Character not deleted");
+        // setTimeout(function(){
+        //window.location.reload();
+        //}, 1000);
         });
     }
 }
