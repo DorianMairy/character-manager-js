@@ -532,6 +532,9 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"goJYj":[function(require,module,exports) {
+nosniff = function() {
+    return "Content-Type: text/html; charset=utf-8";
+};
 // constante
 const main = document.querySelector("main");
 const body = document.querySelector("body");
