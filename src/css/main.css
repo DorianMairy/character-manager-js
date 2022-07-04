@@ -65,28 +65,30 @@ header h1 {
   visibility: hidden;
 }
 
-btn-update {
-  text-align: center;
-  background-color: #fdcb6e;
-  color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-}
-
 .btn-add {
+  margin-top: 15px;
   text-align: center;
-  margin-left: 60%;
-  width: 250px;
+  width: 210px;
   background-color: #1dd1a1;
   color: #fff;
   padding: 20px;
   border-radius: 5px;
 }
 
-.btn-delete {
+.btn-edit {
+  margin-top: 15px;
   text-align: center;
-  margin-left: 20%;
-  width: 250px;
+  width: 210px;
+  background-color: #fdcb6e;
+  color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.btn-delete {
+  margin-top: 15px;
+  text-align: center;
+  width: 210px;
   background-color: #ff6b6b;
   color: #fff;
   padding: 20px;
