@@ -618,9 +618,9 @@ async function displayCharactersCards() {
                     });
                 }
                 Main();
-            //setTimeout(function(){
-            // window.location.reload();
-            // }, 1000);
+                setTimeout(function() {
+                    window.location.reload();
+                }, 1000);
             });
         });
         // bouton edits character
@@ -666,9 +666,9 @@ async function displayCharactersCards() {
                     });
                 }
                 Main();
-            // setTimeout(function(){
-            //window.location.reload();
-            // }, 1000);
+                setTimeout(function() {
+                    window.location.reload();
+                }, 1000);
             });
         });
         // bouton delete character
@@ -683,9 +683,9 @@ async function displayCharactersCards() {
                 method: "DELETE"
             }).then(()=>cardS.innerHTML = "Delete successful");
             else alert("Character not deleted");
-        // setTimeout(function(){
-        //window.location.reload();
-        //}, 1000);
+            setTimeout(function() {
+                window.location.reload();
+            }, 1000);
         });
     }
 }

@@ -100,13 +100,16 @@ async function displayCharactersCards() {
           
         })}
         Main()
-      //setTimeout(function(){
-     // window.location.reload();
-    // }, 1000);
+      setTimeout(function(){
+     window.location.reload();
+    }, 1000);
       })});
 
       
       
+
+
+
 
 
 
@@ -160,10 +163,19 @@ async function displayCharactersCards() {
           
         })}
         Main()
-     // setTimeout(function(){
-      //window.location.reload();
-    // }, 1000);
+     setTimeout(function(){
+      window.location.reload();
+    }, 1000);
       })});
+
+
+
+
+
+
+
+      
+
 
 
 
@@ -183,9 +195,9 @@ async function displayCharactersCards() {
     else {
       alert('Character not deleted');
     }
-   // setTimeout(function(){
-      //window.location.reload();
-  //}, 1000);
+    setTimeout(function(){
+      window.location.reload();
+  }, 1000);
   }
   )};
 }
