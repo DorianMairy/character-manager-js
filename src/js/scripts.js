@@ -16,8 +16,6 @@ async function displayCharactersCards() {
   console.log(character);
   console.log(character.length);
   for (i; i < character.length; i++) {
-    const desc = character[i].description;
-
     // character infos
     // nom des characters
     let cardS = document.createElement("div");
@@ -48,14 +46,17 @@ async function displayCharactersCards() {
     p.setAttribute("style", "display:none;");
     p.innerHTML = character[i].id;
     cardS.appendChild(p);
-
-
+    
+    const descri = character[i].description;
     // clique sur la photo pour afficher les info
     cardimg.addEventListener("click", function () {
-      cardShortDesc.innerHTML = desc;
       cardShortDesc.setAttribute("class", "card-short-desc");
       cardimg.after(cardShortDesc);
-    });
+      cardShortDesc.innerHTML = descri;
+  });
+
+
+
 
   // bouton
   // bouton new character
@@ -116,7 +117,7 @@ async function displayCharactersCards() {
 
 
 
-  // bouton edits character (ne fonctionne pas :/)
+  // bouton edits character (Tout les champs obligatoire ^^')
   let cardBtnEdit = document.createElement("div");
   cardBtnEdit.setAttribute("class", "btn-edit");
   cardS.appendChild(cardBtnEdit);
@@ -166,9 +167,9 @@ async function displayCharactersCards() {
           
         })}
         Main()
-   setTimeout(function(){
-     window.location.reload();
-   }, 1000);
+   //setTimeout(function(){
+     //window.location.reload();
+   //}, 1000);
       })});
 
 
