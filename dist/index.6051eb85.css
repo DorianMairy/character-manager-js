@@ -22,6 +22,15 @@ header h1 {
   font-weight: bold;
 }
 
+input {
+  width: auto;
+  border: 1px solid #2c3a47;
+  border-radius: 5px;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
 .cards {
   margin: 0 auto;
   padding: 20px;

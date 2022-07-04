@@ -42,6 +42,14 @@ async function displayCharactersCards() {
     cardS.appendChild(cardShortDesc);
     cardShortDesc.innerHTML = character[i].shortDescription;
 
+
+    let p = document.createElement("p");
+    p.setAttribute("id", "characterID");
+    p.setAttribute("style", "display:none;");
+    p.innerHTML = character[i].id;
+    cardS.appendChild(p);
+
+
     // clique sur la photo pour afficher les info
     cardimg.addEventListener("click", function () {
       cardShortDesc.innerHTML = desc;
@@ -66,7 +74,7 @@ async function displayCharactersCards() {
     <button class="btn-add" id="btn-add">Add</button>
     `;
     let submit = document.getElementById("btn-add");
- 
+
 
       submit.addEventListener("click", () => {
         const toBase64 = file => new Promise((resolve, reject) => {
@@ -77,8 +85,8 @@ async function displayCharactersCards() {
       });
         
         async function Main() {
-         const file = document.querySelector('#form-image').files[0];
-         const img64 = await toBase64(file);
+        const file = document.querySelector('#form-image').files[0];
+        const img64 = await toBase64(file);
       
       console.log(img64);
       
@@ -101,19 +109,14 @@ async function displayCharactersCards() {
         })}
         Main()
       setTimeout(function(){
-     window.location.reload();
+    window.location.reload();
     }, 1000);
       })});
 
-      
-      
 
 
 
-
-
-
-  // bouton edits character
+  // bouton edits character (ne fonctionne pas :/)
   let cardBtnEdit = document.createElement("div");
   cardBtnEdit.setAttribute("class", "btn-edit");
   cardS.appendChild(cardBtnEdit);
@@ -127,11 +130,11 @@ async function displayCharactersCards() {
     <input class="form-short-desc" type="text" id="form-short-desc" placeholder="short description">
     <input class="form-description" type="text" id="form-description" placeholder="description">
     <input class="form-image" type="file" id="form-image" placeholder="image">
-    <button class="btn-add" id="btn-add">Add</button>
+    <button class="btn-edit" id="btn-edit">Edit</button>
     `;
-    let submit = document.getElementById("btn-add");
- 
-
+    let submit = document.getElementById("btn-edit");
+    
+    console.log(getID);
       submit.addEventListener("click", () => {
         const toBase64 = file => new Promise((resolve, reject) => {
           const reader = new FileReader();
@@ -141,15 +144,15 @@ async function displayCharactersCards() {
       });
         
         async function Main() {
-         const file = document.querySelector('#form-image').files[0];
-         const img64 = await toBase64(file);
+        const file = document.querySelector('#form-image').files[0];
+        const img64 = await toBase64(file);
       
       console.log(img64);
       
         let name = document.getElementById("form-name").value;
         let description = document.getElementById("form-description").value;
         let shortDescription = document.getElementById("form-short-desc").value;
-        fetch(`https://character-database.becode.xyz/characters`, { 
+        fetch(`https://character-database.becode.xyz/characters/` + getID, { 
           method: 'PUT',
           headers: {
             'Content-Type': 'application/json',
@@ -163,18 +166,10 @@ async function displayCharactersCards() {
           
         })}
         Main()
-     setTimeout(function(){
-      window.location.reload();
-    }, 1000);
+   setTimeout(function(){
+     window.location.reload();
+   }, 1000);
       })});
-
-
-
-
-
-
-
-      
 
 
 

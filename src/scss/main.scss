@@ -24,6 +24,15 @@ header {
   }
 }
 
+input {
+  border: 1px solid #2c3a47;
+  border-radius: 5px;
+  padding: 10px;
+  align-items: center;
+  margin-bottom: 10px;
+  width: auto;
+}
+
 .cards {
   padding: 20px;
   margin: 0 auto;
